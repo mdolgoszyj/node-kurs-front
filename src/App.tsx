@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProtectedRoute from "./lib/ProtectedRoute";
 import { DialogProvider } from "./context/DialogContext";
+import AboutPage from "./pages/AboutPage";
 
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ function App() {
             <Route element={<ProtectedRoute />} >
               <Route path="/" element={<HomePage />} />
             </Route>
+            <Route path="/about" element={<AboutPage />} />
             
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
